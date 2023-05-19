@@ -36,14 +36,43 @@
     }
     
     th {
-      background-color: #ffc2a9;
+      background-color: #f2f2f2;
       font-weight: bold;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ffc2a9;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="C:\Users\vrp56\Documents\vrp56.github.io\Images\LogoResize.png" alt="Logo" id="logo">
+    <img src="Images\LogoResize.png" alt="Logo" id="logo">
   </header>
   
   <main>
@@ -58,16 +87,30 @@
     <h2>Links</h2>
     <table>
       <tr>
-        <th>Portfolio</th>
-        <th>Publications</th>
-        <th>LinkedIn</th>
+        <th>Page 1</th>
+        <th>Page 2</th>
       </tr>
       <tr>
         <td><a href="page1.html">Page 1</a></td>
-        <td><a href="page2.html">Page 2</a></td>
-        <td><a href="page3.html">Page 3</a></td>
+        <td>
+          <div class="dropdown">
+            <span>Page 2</span>
+            <div class="dropdown-content">
+              <a href="page2a.html">Page 2A</a>
+              <a href="page2b.html">Page 2B</a>
+              <a href="page2c.html">Page 2C</a>
+            </div>
+          </div>
+        </td>
       </tr>
     </table>
   </main>
 </body>
 </html>
+
+
+
+
+
+
+      
