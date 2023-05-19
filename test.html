@@ -7,6 +7,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: black;
+      color: white;
     }
     
     header {
@@ -28,15 +30,17 @@
     table {
       width: 100%;
       border-collapse: collapse;
+      background-color: #4c4c4c;
     }
     
     th, td {
       padding: 10px;
       text-align: left;
+      border: 1px solid white;
     }
     
     th {
-      background-color: #f2f2f2;
+      background-color: #454545;
       font-weight: bold;
     }
     
@@ -48,7 +52,7 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f9f9f9;
+      background-color: #3a3a3a;
       min-width: 160px;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       z-index: 1;
@@ -59,58 +63,81 @@
     }
     
     .dropdown-content a {
-      color: black;
+      color: white;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
     }
     
     .dropdown-content a:hover {
-      background-color: #ffc2a9;
+      background-color: #2f2f2f;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .social-icons a {
+      margin: 0 10px;
+    }
+    
+    .social-icons img {
+      width: 40px;
+      height: 40px;
     }
   </style>
 </head>
 <body>
   <header>
     <img src="Images\LogoResize.png" alt="Logo" id="logo">
+    <h2>Links</h2>
+    <table>
+        <tr>
+            <th>Pages</th>
+        </tr>
+        <tr>
+            <td><a href="page1.html">Publications</a></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="dropdown">
+                    <span>Portfolio</span>
+                    <div class="dropdown-content">
+                        <a href="page2a.html">Page 2A</a>
+                        <a href="page2b.html">Page 2B</a>
+                        <a href="page2c.html">Page 2C</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
   </header>
   
   <main>
     <h1>About Me</h1>
     <p>My name is Viraj Patel. I am a Master's student in Comuter Science at Mississippi State University. 
-      My areas of study are Computer Graphics, specifically with Augmented and Virtual Reality, and Artificial 
-      Intelligence. I am working on my thesis where I investigate driver performance, situation awareness, 
-      and cognitive load at differnt levels of partial autonomy with dynamic task allocation. I am comparing 
-      data I find in my research to data collected from a similar study done in a web-based desktop driving 
-      simulator. More details of this can be found under the Portfolio tab below.</p>
-    
-    <h2>Links</h2>
-    <table>
-      <tr>
-        <th>Page 1</th>
-        <th>Page 2</th>
-      </tr>
-      <tr>
-        <td><a href="page1.html">Page 1</a></td>
-        <td>
-          <div class="dropdown">
-            <span>Page 2</span>
-            <div class="dropdown-content">
-              <a href="page2a.html">Page 2A</a>
-              <a href="page2b.html">Page 2B</a>
-              <a href="page2c.html">Page 2C</a>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </table>
+        My areas of study are Computer Graphics, specifically with Augmented and Virtual Reality, and Artificial 
+        Intelligence. I am working on my thesis where I investigate driver performance, situation awareness, 
+        and cognitive load at differnt levels of partial autonomy with dynamic task allocation. I am comparing 
+        data I find in my research to data collected from a similar study done in a web-based desktop driving 
+        simulator. More details of this can be found under the Portfolio tab below.</p>
+      
   </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/viraj-patel-aa5a85238/"><img src="Images\LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+      <a href="https://github.com/vrp56"><img src="Images\github.png" alt="GitHub"></a>
+      <a href="https://twitter.com/CausticCurry"><img src="Images\twitter.png" alt="Twitter"></a>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
-      
