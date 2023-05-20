@@ -61,7 +61,6 @@
 
     .menu-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
@@ -77,6 +76,9 @@
       background-color: grey;
       padding: 6px;
       border-radius: 4px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
     }
     
     @media screen and (min-width: 768px) {
@@ -109,6 +111,7 @@
 </head>
 <body>
   <header>
+    <span class="menu-icon">&#9776;</span>
     <img src="Images\LogoResize.png" alt="Logo" id="logo">
   </header>
   
@@ -116,7 +119,6 @@
     <div class="menu-container">
         <span class="menu-text">Projects and Publications</span>
         <div class="dropdown">
-            <span class="menu-icon">&#9776;</span>
             <div class="dropdown-content">
             <a href="publications.html">Publications</a>
             <div class="dropdown">
