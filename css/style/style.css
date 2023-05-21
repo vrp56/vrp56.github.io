@@ -22,15 +22,13 @@ body {
   main {
     margin: 20px auto;
     max-width: 800px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 0;
+    padding-left: 0 20px;
   }
   
   .dropdown {
     display: inline-block;
     position: relative;
+    padding-bottom: 20px; /* Add desired padding value here */
   }
   
   .dropdown .dropdown-menu {
