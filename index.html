@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      padding-bottom: 60px;
       background-color: black;
       color: white;
     }
@@ -81,11 +84,15 @@
       margin-right: 10px;
     }
     
-    
     footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 60px; /* Adjust this value to set the height of the footer */
       background-color: #333;
-      padding: 20px;
+      color: white;
       text-align: center;
+      line-height: 60px;
     }
     
     .social-icons {
@@ -105,45 +112,53 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="Images\LogoResize.png" alt="Logo" id="logo">
-  </header>
-  
-  <main>
-    <div class="menu-container">
-        <div class="dropdown">
-            <span class="menu-icon">&#9776;</span>
-            <div class="dropdown-content">
-                <a href="publications.html">Publications</a>
-                <div class="dropdown">
-                    <span>Portfolio</span>
-                    <div class="dropdown-content">
-                        <a href="portfolio1.html">Portfolio 1</a>
-                        <a href="portfolio2.html">Portfolio 2</a>
-                        <a href="portfolio3.html">Portfolio 3</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <span class="menu-text">Projects and Publications</span>
-    </div>
+  <div class="grid-container">
+    <header>
+      <img src="Images\LogoResize.png" alt="Logo" id="logo">
+    </header>
+    
+    <main>
+      <div class="menu-container">
+          <div class="dropdown">
+              <span class="menu-icon">&#9776;</span>
+              <div class="dropdown-content">
+                  <a href="publications.html">Publications</a>
+                  <div class="dropdown">
+                      <span>Portfolio</span>
+                      <div class="dropdown-content">
+                          <a href="portfolio1.html">Portfolio 1</a>
+                          <a href="portfolio2.html">Portfolio 2</a>
+                          <a href="portfolio3.html">Portfolio 3</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <span class="menu-text">Projects and Publications</span>
+      </div>
+          
+      <h1>About Me</h1>
+      <p>My name is Viraj Patel. I am a Master's student in Comuter Science at Mississippi State University. 
+          My areas of study are Computer Graphics, specifically with Augmented and Virtual Reality, and Artificial 
+          Intelligence. I am working on my thesis where I investigate driver performance, situation awareness, 
+          and cognitive load at differnt levels of partial autonomy with dynamic task allocation. I am comparing 
+          data I find in my research to data collected from a similar study done in a web-based desktop driving 
+          simulator. More details of this can be found under the Portfolio tab below.</p>
         
-    <h1>About Me</h1>
-    <p>My name is Viraj Patel. I am a Master's student in Comuter Science at Mississippi State University. 
-        My areas of study are Computer Graphics, specifically with Augmented and Virtual Reality, and Artificial 
-        Intelligence. I am working on my thesis where I investigate driver performance, situation awareness, 
-        and cognitive load at differnt levels of partial autonomy with dynamic task allocation. I am comparing 
-        data I find in my research to data collected from a similar study done in a web-based desktop driving 
-        simulator. More details of this can be found under the Portfolio tab below.</p>
-      
-  </main>
+    </main>
+    
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/viraj-patel-aa5a85238/"><img src="Images\LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+        <a href="https://github.com/vrp56"><img src="Images\github.png" alt="GitHub"></a>
+        <a href="https://twitter.com/CausticCurry"><img src="Images\twitter.png" alt="Twitter"></a>
+      </div>
+    </footer>
+  </div>
   
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/viraj-patel-aa5a85238/"><img src="Images\LinkedIn_logo_initials.png" alt="LinkedIn"></a>
-      <a href="https://github.com/vrp56"><img src="Images\github.png" alt="GitHub"></a>
-      <a href="https://twitter.com/CausticCurry"><img src="Images\twitter.png" alt="Twitter"></a>
-    </div>
-  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+  <script>
+    // Initialize Foundation
+    $(document).foundation();
+  </script>
 </body>
 </html>
