@@ -22,7 +22,10 @@ body {
   main {
     margin: 20px auto;
     max-width: 800px;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 0;
   }
   
   .dropdown {
@@ -97,7 +100,6 @@ body {
     color: white;
     background-color: grey;
     padding: 6px;
-    padding-bottom: 10px;
     border-radius: 4px;
   }
 
