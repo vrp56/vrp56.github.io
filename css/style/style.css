@@ -28,7 +28,7 @@ body {
   .dropdown {
     display: inline-block;
     position: relative;
-    padding-bottom: 20px; /* Add desired padding value here */
+    padding-bottom: 10px; /* Add desired padding value here */
   }
   
   .dropdown .dropdown-menu {
