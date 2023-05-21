@@ -18,7 +18,7 @@
       text-align: center;
       padding: 20px;
       position: relative;
-      background-color: white;
+      background-color: black;
     }
     
     #logo {
@@ -62,28 +62,7 @@
     .dropdown-content a:hover {
       background-color: #2f2f2f;
     }
-    
 
-    .menu-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .menu-text {
-      margin-right: 10px;
-    }
-
-    /* Hamburger Menu Styles */
-    .menu-icon {
-      cursor: pointer;
-      font-size: 24px;
-      color: white;
-      background-color: grey;
-      padding: 6px;
-      border-radius: 4px;
-      margin-right: 10px;
-    }
-    
     footer {
       position: fixed;
       bottom: 0;
@@ -109,32 +88,53 @@
       width: 40px;
       height: 40px;
     }
+    
+    .menu-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-text {
+      margin-right: 10px;
+    }
+
+    /* Hamburger Menu Styles */
+    .menu-icon {
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+      background-color: grey;
+      padding: 6px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
   </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
 </head>
 <body>
-  
+  <div class="grid-container">
     <header>
       <img src="Images\LogoResize.png" alt="Logo" id="logo">
     </header>
     
     <main>
       <div class="menu-container">
-          <div class="dropdown">
-              <span class="menu-icon">&#9776;</span>
+        <div class="dropdown">
+          <span class="menu-icon">&#9776;</span>
+          <div class="dropdown-content">
+            <a href="publications.html">Publications</a>
+            <div class="dropdown">
+              <span>Portfolio</span>
               <div class="dropdown-content">
-                  <a href="publications.html">Publications</a>
-                  <div class="dropdown">
-                      <span>Portfolio</span>
-                      <div class="dropdown-content">
-                          <a href="portfolio1.html">Portfolio 1</a>
-                          <a href="portfolio2.html">Portfolio 2</a>
-                          <a href="portfolio3.html">Portfolio 3</a>
-                      </div>
-                  </div>
+                <a href="portfolio1.html">Portfolio 1</a>
+                <a href="portfolio2.html">Portfolio 2</a>
+                <a href="portfolio3.html">Portfolio 3</a>
               </div>
+            </div>
           </div>
-          <span class="menu-text">Projects and Publications</span>
+        </div>
+        <span class="menu-text">Projects and Publications</span>
       </div>
           
       <h1>About Me</h1>
@@ -154,9 +154,8 @@
         <a href="https://twitter.com/CausticCurry"><img src="Images\twitter.png" alt="Twitter"></a>
       </div>
     </footer>
+  </div>
   
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
   <script>
     // Initialize Foundation
     $(document).foundation();
