@@ -25,10 +25,15 @@ body {
     padding-left: 0 20px;
   }
   
-  .dropdown {
+  .dropdown-burger {
     display: inline-block;
     position: relative;
     padding-bottom: 20px; /* Add desired padding value here */
+  }
+
+  .dropdown {
+    display: inline-block;
+    position: relative;
   }
   
   .dropdown .dropdown-menu {
