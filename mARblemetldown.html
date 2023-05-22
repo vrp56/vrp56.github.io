@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mARble Meltdown Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css\style\style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>  
+    <script>
+        $(document).ready(function() {
+          // Function to handle window resize event
+          function handleResize() {
+            var windowWidth = $(window).width();
+      
+            // Check window width and add/remove classes accordingly
+            if (windowWidth < 576) {
+              $('.image-class').removeClass('max-width-desktop').addClass('max-width-smartphone');
+            } else {
+              $('.image-class').removeClass('max-width-smartphone').addClass('max-width-desktop');
+            }
+          }
+      
+          // Call the function on page load and window resize
+          handleResize();
+          $(window).resize(handleResize);
+        });
+      </script>
+      
+      <style>
+        .max-width-smartphone {
+          max-width: 300px;
+        }
+      
+        .max-width-desktop {
+          max-width: 400px;
+        }
+      </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <header>
+      <a href="index.html">
+        <img src="Images\LogoResize.png" alt="Logo" id="logo">
+      </a>
+    </header>
+    
+    <main>
+      <div class="menu-container">
+        <div class="dropdown">
+          <span class="menu-icon">&#9776;</span>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="publications.html">Publications</a>
+            <a class="dropdown-item" href="Resume.html">Resume</a>
+            <div class="dropdown">
+              <span class="dropdown-item-text">Portfolio</span>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="thesis.html">Thesis</a>
+                <a class="dropdown-item" href="resevior_bank.html">Resevior Bank Heist</a>
+                <a class="dropdown-item" href="mARblemetldown.html">mARble Meltdown</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="menu-text">Projects and Publications</span>
+      </div>
+          
+      <div class="text-center">
+      <h1>mARble Meltdown</h1>
+      <p> A simple mobile Augmented Reality game where you compete with another player to get your marbles close 
+        to the center of the target. Do to time constraints during development, this game is played on one device 
+        by passing the device between the players. This game was developed using Unity and ARFoundation for Android 
+        devices and was tested on a Samsung Galaxy S8. The project can be found on my GitHub 
+        <a href="https://github.com/vrp56-School-Projects/Game2">here</a>.
+      </p>
+
+      <h2>Gameplay</h2>
+      <p></p>
+
+      <h3>Board Placement</h3>
+      <p>When the game opens up, the players has to move their phone around to detect a plane to play on. This can 
+        be any horizontal surface, preferably one with distinguishing features. After a plane has been detected, 
+        the board prefab will move to that position and the players can tap anywhere on the plane to lock the board 
+        in place.</p>
+        <img src="Images\PlaceBoard.png" alt="Board Placement" id="Board Placement" class="img-fluid mx-auto d-block image-class">
+        <p></p>
+        <p></p>
+
+        <h3>Stage Selection</h3>
+        <p>Once the board position has been set, the players will see a stage selection menu where they can cycle 
+        through the differnt stages by tapping the option arrows. Once on the desired stage, it can be confirmed
+        by tapping on the check button.</p>
+        <img src="Images\BoardSelection.png" alt="Board Selection" id="Board Selection" class="img-fluid mx-auto d-block image-class">
+        <p></p>
+        <p></p>
+        
+        <h3>Marble Selection</h3>
+        <p>After the the stage has been selected, the players will see a Player 1 Options menu where Player 1 can 
+        select their desired marble texture, trail, and hat. This is done similarly to stage selection and the 
+        changes can be seen on the marble orbiting the menu. Once Player 1 has confirmed their settings, Player 
+        2 will be allowed to do the same.</p>
+        <img src="Images\PlayerOptions.png" alt="Marble Selection" id="Marble Selection" class="img-fluid mx-auto d-block image-class">
+        <p></p>
+        <p></p>
+
+        <h3>Player Turn</h3>
+        <p>Once both players have finalized their settings, the competition begins. The player marble can be moved 
+        along the edge of the board by moving the device left or right and confirming location by tapping the 
+        check button. Each player will take turns launching their mable via a direction/power arrow that is 
+        controlled by the check button under the board.</p>
+        <img src="Images\Play.png" alt="Player Turn" id="Player Turn" class="img-fluid mx-auto d-block image-class">
+        <p></p>
+        <p></p>
+
+        <h3>Rules</h3>
+        <p>
+            <ul>
+              <li>Each player gets 5 marbles</li>
+              <li>Points are determined by distance from scoring marble</li> 
+                <ul>
+                    <li>Hitting other marbles, including the scoring marble, is legal</li>
+                    <li>Concentric circles visualize score zones and can be viewed by moving camera toward the score marble</li>
+                    <li>The lowest score wins</li>
+                </ul>
+              <li>Player 1 goes first</li>
+              <li>If the score marble is outside of the play bounds at the end of a player's turn, they lose the game</li>
+            </ul>
+          </p>
+          <img src="Images\ScoreBounds.png" alt="Scoring" id="Scoring" class="img-fluid mx-auto d-block image-class">
+          
+        <p></p>
+        <p></p>
+
+        <div class="container">
+            <h3>Embedded Video Example</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <video class="embed-responsive-item" controls>
+                <source src="Images\resevior_bank_heist.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+        </div>
+      </div>
+
+        
+      
+        
+    </main>
+    
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/viraj-patel-aa5a85238/"><img src="Images\LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+        <a href="https://github.com/vrp56"><img src="Images\github.png" alt="GitHub"></a>
+        <a href="https://twitter.com/CausticCurry"><img src="Images\twitter.png" alt="Twitter"></a>
+      </div>
+    </footer>
+  </div>
+  
+</body>
+</html>
