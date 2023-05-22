@@ -15,7 +15,7 @@
           var windowHeight = $(window).height();
     
           // Check window width and add/remove classes accordingly
-          if (windowHeight < 700) {
+          if (windowHeight < 600) {
             $('.pdf-class').removeClass('max-height-desktop').addClass('max-height-smartphone');
           } else {
             $('.pdf-class').removeClass('max-height-smartphone').addClass('max-height-desktop');
@@ -30,7 +30,7 @@
     
     <style>
       .max-height-smartphone {
-        height: 500px;
+        height: 400px;
       }
     
       .max-height-desktop {
