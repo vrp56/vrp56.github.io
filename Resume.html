@@ -12,13 +12,13 @@
       $(document).ready(function() {
         // Function to handle window resize event
         function handleResize() {
-          var windowHeight = $(window).height();
+          var windowWidth = $(window).width();
     
           // Check window width and add/remove classes accordingly
-          if (windowHeight < 900) {
-            $('.pdf-class').removeClass('max-height-desktop').addClass('max-height-smartphone');
+          if (windowWidth < 576) {
+            $('.image-class').removeClass('max-height-desktop').addClass('max-height-smartphone');
           } else {
-            $('.pdf-class').removeClass('max-height-smartphone').addClass('max-height-desktop');
+            $('.image-class').removeClass('max-height-smartphone').addClass('max-height-desktop');
           }
         }
     
@@ -27,10 +27,11 @@
         $(window).resize(handleResize);
       });
     </script>
+  
     
     <style>
       .max-height-smartphone {
-        height: 400px;
+        height: 500px;
       }
     
       .max-height-desktop {
