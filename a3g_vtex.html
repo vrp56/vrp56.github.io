@@ -112,7 +112,7 @@
                           // height changes, it must be set per-frame in the draw() function.
                           const M_pro = mat4.create();
 
-                          const forwardVector = vec3.fromValues(M_model[11], M_model[12], M_model[13]);
+                          const forwardVector = vec3.create(1,0,0);
                           const distanceToMove = 10.0;
                           const translation = vec3.create();
 
