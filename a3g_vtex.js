@@ -48,7 +48,7 @@ const M_view = mat4.lookAt(
 // height changes, it must be set per-frame in the draw() function.
 const M_pro = mat4.create();
 
-const forwardVector = vec3.fromValues(M_model[8], M_model[9], M_model[10]);
+const forwardVector = vec3.fromValues(-M_model[2], -M_model[6], -M_model[10]);
 const distanceToMove = 10.0;
 const translation = vec3.create();
 
