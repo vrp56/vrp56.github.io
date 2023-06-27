@@ -104,15 +104,15 @@ function load()
         console.log(`keypress: ${keycode}`)
         if(keycode == 'ArrowRight')
         {
-            // lightPos[1] += 100;
-            // console.log(`Light Position: ${lightPos}`);
-            // mat4.rotateZ(M_model, M_model, (Math.PI * .25));
+            lightPos[1] += 100;
+            console.log(`Light Position: ${lightPos}`);
+            mat4.rotateZ(M_model, M_model, (Math.PI * .25));
         }
         else if(keycode =='ArrowLeft')
         {
-            // lightPos[1] -= 100;
-            // console.log(`Light Position: ${lightPos}`);
-            // mat4.rotateZ(M_model, M_model, (Math.PI * -.25));
+            lightPos[1] -= 100;
+            console.log(`Light Position: ${lightPos}`);
+            mat4.rotateZ(M_model, M_model, (Math.PI * -.25));
         }
         else if(keycode =='ArrowUp')
         {
@@ -121,6 +121,7 @@ function load()
             else if (z_move) lightPos[2] += 100;
 
             console.log(`Light Position: ${lightPos}`);
+            document.getElementById("output").textContent = `Light Position: ${lightPos}`;
         }
         else if(keycode =='ArrowDown')
         {
@@ -129,6 +130,7 @@ function load()
             else if (z_move) lightPos[2] -= 100;
 
             console.log(`Light Position: ${lightPos}`);
+            document.getElementById("output").textContent = `Light Position: ${lightPos}`;
         }
         else if(keycode == 'm')
         {
@@ -137,12 +139,14 @@ function load()
             {
                 tone = false;
                 console.log(`Current Light Mode: Spot`);
+                document.getElementById("output").textContent = `Current Light Mode: Spot`;
             }
             
             else 
             {
                 tone = false;
                 console.log(`Current Light Mode: Directional`);
+                document.getElementById("output").textContent = `Current Light Mode: Directional`;
             }
             
         }
@@ -155,6 +159,7 @@ function load()
                 z_move = false;
             }
             console.log(`Movement modes: X: ${x_move}, Y: ${y_move}, Z: ${z_move}`);
+            document.getElementById("output").textContent = `Movement modes: X: ${x_move}, Y: ${y_move}, Z: ${z_move}`;
         }
         else if (keycode == 'y')
         {
@@ -165,6 +170,7 @@ function load()
                 z_move = false;
             }
             console.log(`Movement modes: X: ${x_move}, Y: ${y_move}, Z: ${z_move}`);
+            document.getElementById("output").textContent = `Movement modes: X: ${x_move}, Y: ${y_move}, Z: ${z_move}`;
         }
         else if (keycode == 'z')
         {
@@ -175,6 +181,7 @@ function load()
                 y_move = false;
             }
             console.log(`Movement modes: X: ${x_move}, Y: ${y_move}, Z: ${z_move}`);
+            document.getElementById("output").textContent = `Movement modes: X: ${x_move}, Y: ${y_move}, Z: ${z_move}`;
         }
         else if (keycode == 't')
         {
@@ -183,11 +190,13 @@ function load()
             {
                 spot = false;
                 console.log(`Current Light Mode: Tone`);
+                document.getElementById("output").textContent = `Current Light Mode: Tone`;
             } 
             else 
             {
                 spot = true;
                 console.log(`Current Light Mode: Spot`);
+                document.getElementById("output").textContent = `Current Light Mode: Spot`;
             }
             
         }
