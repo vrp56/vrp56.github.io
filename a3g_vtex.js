@@ -62,10 +62,7 @@ let y_move = false;
 let z_move = false;
 let car_move = false;
 
-function myFunction() {
-    var container = document.getElementById('js');
-    container.innerHTML = 'JavaScript code executed within the container!';
-}
+
 
 // Set up four Fetch calls for the resources and process accordingly. 
 // Each one calls the init() function; this function only completes when
