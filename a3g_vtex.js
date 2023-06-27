@@ -127,8 +127,8 @@ function load()
             else if (y_move) lightPos[1] += 100;
             else if (z_move) lightPos[2] += 100;
             else if (car_move) {
-                vec3.scale(translation, forwardVector, distanceToMove);
-                mat4.translate(M_model, M_model, translation);
+                //vec3.scale(translation, forwardVector, distanceToMove);
+                mat4.translate(M_model, M_model, vec3.create(10, 0, 0));
             }
 
             console.log(`Light Position: ${lightPos}`);
@@ -140,8 +140,8 @@ function load()
             else if (y_move) lightPos[1] -= 100;
             else if (z_move) lightPos[2] -= 100;
             else if (car_move) {
-                vec3.scale(translation, forwardVector, -distanceToMove);
-                mat4.translate(M_model, M_model, translation);
+                //vec3.scale(translation, forwardVector, -distanceToMove);
+                mat4.translate(M_model, M_model, vec3.create(-10, 0, 0));
             }
 
             console.log(`Light Position: ${lightPos}`);
