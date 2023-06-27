@@ -48,6 +48,11 @@ const M_view = mat4.lookAt(
 // height changes, it must be set per-frame in the draw() function.
 const M_pro = mat4.create();
 
+const forwardVector = vec3.fromValues(M_model[8], M_model[9], M_model[10]);
+const distanceToMove = 10.0;
+const translation = vec3.create();
+
+
 // light mode and movement variables
 let lightPos = vec3.fromValues(800, 400, 200);
 let spot = true;
@@ -55,6 +60,7 @@ let tone = false;
 let x_move = false;
 let y_move = false;
 let z_move = false;
+let car_move = false;
 
 
 // Set up four Fetch calls for the resources and process accordingly. 
@@ -104,14 +110,14 @@ function load()
         console.log(`keypress: ${keycode}`)
         if(keycode == 'ArrowRight')
         {
-            lightPos[1] += 100;
-            console.log(`Light Position: ${lightPos}`);
+            //lightPos[1] += 100;
+            //console.log(`Light Position: ${lightPos}`);
             mat4.rotateZ(M_model, M_model, (Math.PI * .25));
         }
         else if(keycode =='ArrowLeft')
         {
-            lightPos[1] -= 100;
-            console.log(`Light Position: ${lightPos}`);
+            //lightPos[1] -= 100;
+            //console.log(`Light Position: ${lightPos}`);
             mat4.rotateZ(M_model, M_model, (Math.PI * -.25));
         }
         else if(keycode =='ArrowUp')
@@ -119,6 +125,10 @@ function load()
             if (x_move) lightPos[0] += 100;
             else if (y_move) lightPos[1] += 100;
             else if (z_move) lightPos[2] += 100;
+            else if (car_move) {
+                vec3.scale(translation, forwardVector, distanceToMove);
+                mat4.translate(M_model, M_model, translation);
+            }
 
             console.log(`Light Position: ${lightPos}`);
             document.getElementById("output").textContent = `Light Position: ${lightPos}`;
@@ -128,6 +138,10 @@ function load()
             if (x_move) lightPos[0] -= 100;
             else if (y_move) lightPos[1] -= 100;
             else if (z_move) lightPos[2] -= 100;
+            else if (car_move) {
+                vec3.scale(translation, forwardVector, -distanceToMove);
+                mat4.translate(M_model, M_model, translation);
+            }
 
             console.log(`Light Position: ${lightPos}`);
             document.getElementById("output").textContent = `Light Position: ${lightPos}`;
@@ -210,6 +224,16 @@ function load()
             y_move = false;
             z_move = false;
             // console.log(`Light Position: ${lightPos}`);
+        }
+        else if (keycode == 'v')
+        {
+            car_move = !car_move;
+            x_move = false;
+            y_move = false;
+            z_move = false;
+            console.log(`Vehicle Movement: ${car_move}`);
+            document.getElementById("output").textContent = `Vehicle Movement: ${car_move}`;
+
         }
        });
 }
