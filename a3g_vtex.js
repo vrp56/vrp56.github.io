@@ -63,7 +63,7 @@ let z_move = false;
 let car_move = false;
 
 function myFunction() {
-    var container = document.getElementById('container');
+    var container = document.getElementById('js');
     container.innerHTML = 'JavaScript code executed within the container!';
 }
 
