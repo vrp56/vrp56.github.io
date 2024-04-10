@@ -36,20 +36,6 @@
       .max-width-desktop {
         max-width: 400px;
       }
-
-      .card {
-        width: 200rem;
-        margin: 2rem;
-      }
-
-      .image-grid-container {
-        display: grid;
-
-        grid-template-columns: auto auto;
-      }
-      img {
-        width: 100%;
-      }
     </style>
 </head>
 <body>
@@ -171,10 +157,10 @@
       <h4>Obstacles</h4>
       <p>Here you can see the obstacles that the participants encountered.</p>
 
-      <div class="card">
-        <div class="image-grid-container">
-          <img src="Images\MTobs.png" alt="MT Obstacle" id="MT Obstacle">
-          <img src="Images\Obs.png" alt="Barrel Obstacle" id="Barrel Obstacle">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-lg-0">
+          <img src="Images\MTobs.png" alt="MT Obstacle" id="MT Obstacle" class="img-fluid mx-auto d-block image-class">
+          <img src="Images\Obs.png" alt="Barrel Obstacle" id="Barrel Obstacle" class="img-fluid mx-auto d-block image-class">
         </div>
       </div>
 
